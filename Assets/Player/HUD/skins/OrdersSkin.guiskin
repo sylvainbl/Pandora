@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12001, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: OrderSkin
+  m_Name: OrdersSkin
   m_EditorClassIdentifier: 
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_box:
@@ -254,15 +254,15 @@ MonoBehaviour:
       m_Top: 0
       m_Bottom: 0
     m_Margin:
-      m_Left: 4
-      m_Right: 4
-      m_Top: 4
-      m_Bottom: 4
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
     m_Padding:
       m_Left: 0
       m_Right: 0
-      m_Top: 3
-      m_Bottom: 3
+      m_Top: 0
+      m_Bottom: 0
     m_Overflow:
       m_Left: 0
       m_Right: 0
@@ -271,8 +271,8 @@ MonoBehaviour:
     m_Font: {fileID: 0}
     m_FontSize: 0
     m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 1
+    m_Alignment: 4
+    m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 1
     m_ImagePosition: 0
