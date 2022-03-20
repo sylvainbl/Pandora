@@ -263,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceSkin: {fileID: 11400000, guid: 5d79af5b52f5a61489ee9cedb56ba406, type: 2}
   ordersSkin: {fileID: 11400000, guid: dea630976490fb14a849c7cce3f826d9, type: 2}
+  selectBoxSkin: {fileID: 11400000, guid: 1aab6f3e8845b6a48bc9c1532d6fdcd7, type: 2}
 --- !u!1 &345909550
 GameObject:
   m_ObjectHideFlags: 0
