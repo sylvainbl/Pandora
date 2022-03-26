@@ -436,8 +436,8 @@ MonoBehaviour:
   sellValue: 0
   hitPoints: 0
   maxHitPoints: 0
-  moveSpeed: 0
-  rotateSpeed: 0
+  moveSpeed: 4
+  rotateSpeed: 0.1
 --- !u!1 &2658100915209933677
 GameObject:
   m_ObjectHideFlags: 0

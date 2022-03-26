@@ -523,3 +523,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46785ea9fbe3b0f47a7f745cb5f90801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectName: 
+  buildImage: {fileID: 0}
+  cost: 0
+  sellValue: 0
+  hitPoints: 0
+  maxHitPoints: 0
+  maxBuildProgress: 0
+  rallyPointImage: {fileID: 2800000, guid: 85c7f57c354ef9e4fa1438669dcedbde, type: 3}
