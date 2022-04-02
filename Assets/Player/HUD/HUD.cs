@@ -7,7 +7,6 @@ public class HUD : MonoBehaviour
 {
     private Player player;
 
-    public GUISkin resourceSkin, ordersSkin, selectBoxSkin;
     public Texture2D activeCursor;
     public Texture2D buildFrame, buildMask;
     public Texture2D smallButtonHover, smallButtonClick;
@@ -16,7 +15,10 @@ public class HUD : MonoBehaviour
     public Texture2D[] moveCursors, attackCursors, harvestCursors;
     public Texture2D[] resources;
     public GUISkin mouseCursorSkin;
+    public GUISkin resourceSkin, ordersSkin, selectBoxSkin;
     public Texture2D buttonHover, buttonClick;
+    public Texture2D healthy, damaged, critical;
+    public Texture2D[] resourceHealthBars;
 
 
     private const int SELECTION_NAME_HEIGHT = 15;
@@ -35,7 +37,6 @@ public class HUD : MonoBehaviour
     private WorldObject lastSelection;
     private float sliderValue;
     private int buildAreaHeight = 0;
-
     private CursorState previousCursorState;
 
 
@@ -43,7 +44,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         player = transform.root.GetComponent<Player>();
-        ResourceManager.StoreSelectBoxItems(selectBoxSkin);
+        ResourceManager.StoreSelectBoxItems(selectBoxSkin, healthy, damaged, critical);
         SetCursorState(CursorState.Select);
         resourceValues = new Dictionary<ResourceType, int>();
         resourceLimits = new Dictionary<ResourceType, int>();
@@ -64,6 +65,16 @@ public class HUD : MonoBehaviour
                 default: break;
             }
         }
+        Dictionary< ResourceType, Texture2D > resourceHealthBarTextures = new Dictionary< ResourceType, Texture2D >();
+        for(int i = 0; i < resourceHealthBars.Length; i++) {
+            switch(resourceHealthBars[i].name) {
+            case "ore":
+                resourceHealthBarTextures.Add(ResourceType.Ore, resourceHealthBars[i]);
+                break;
+            default: break;
+            }
+        }
+        ResourceManager.SetResourceHealthBarTextures(resourceHealthBarTextures);
     }
 
     // Update is called once per frame
